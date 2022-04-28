@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "woyltmhh",
+    "password": "chdWme5x6q1anv1np-g763exhwP23Svm",
+    "database": "woyltmhh",
+    "host": "heffalump.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
