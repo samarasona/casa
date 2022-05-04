@@ -12,9 +12,22 @@ app.get("/", async function (req,res){
   res.json(mostra)
 });
 
-app.post("/", function(req,res){
-  var resultado = usuario.create
+app.post("/", async function(req,res){
+  var resultado = usuario.create(req.body)
   res.json(resultado);
+});
+
+app.put('/:id', async function(req, res) {
+    const atualizar = await usuario.findByPk(req.params.id);
+  atualizar.nome = req.body.nome
+  const resultadoSave = await atualizar.save();
+  res.json(resultadoSave)
+  });
+
+app.delete('/:id', async function(req, res) {
+    const deletar = await usuario.findByPk(req.params.id);
+    deletar.destroy();
+  res.json(deletar)
 });
 
 app.listen(3000, function(req,res){
